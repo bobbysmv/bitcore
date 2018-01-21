@@ -13,24 +13,42 @@ exports.livenet = {
   hkeyPublicVersion: 0x0488b21e,
   hkeyPrivateVersion: 0x0488ade4,
   genesisBlock: {
-    hash: hex('6FE28C0AB6F1B372C1A6A246AE63F74F931E8365E15A089C68D6190000000000'),
-    merkle_root: hex('3BA3EDFD7A7B12B27AC72C3E67768F617FC81BC3888A51323A9FB8AA4B1E5E4A'),
+    hash: hex('000009f7e55e9e3b4781e22bd87a7cfa4acada9e4340d43ca738bf4e9fb8f5ce'),
+    merkle_root: hex('a626e591b4583a9cdfa3f8c7ffa90628c745dc01b411825544209fce3bdba4d2'),
     height: 0,
-    nonce: 2083236893,
+    nonce: 369858,
     version: 1,
     prev_hash: buffertools.fill(new Buffer(32), 0),
-    timestamp: 1231006505,
-    bits: 486604799,
+    timestamp: 1415384723,
+    bits: 507510783,
   },
   dnsSeeds: [
-    'seed.bitcoin.sipa.be',
-    'dnsseed.bluematt.me',
-    'dnsseed.bitcoin.dashjr.org',
-    'seed.bitcoinstats.com',
-    'seed.bitnodes.io',
-    'bitseed.xf2.org'
   ],
-  defaultClientPort: 8333
+  defaultClientPort: 9253
+};
+
+// 以下コミュニティから拝借。hash値逆だったり諸々違った
+exports.livenet = {
+    name: 'livenet',
+    magic: hex('daa5bef9'),
+    addressVersion: 81,
+    privKeyVersion: 128,
+    P2SHVersion: 5,
+    hkeyPublicVersion: 0x0488b21e,
+    hkeyPrivateVersion: 0x0488ade4,
+    genesisBlock: {
+        hash: hex('CEF5B89F4EBF38A73CD440439EDACA4AFA7C7AD82BE281473B9E5EE5F7090000'),
+        merkle_root: hex('D2A4DB3BCE9F2044558211B401DC45C72806A9FFC7F8A3DF9C3A58B491E526A6'),
+        height: 0,
+        nonce: 369858,
+        version: 1,
+        prev_hash: buffertools.fill(new Buffer(32), 0),
+        timestamp: 1415384723,
+        bits: 507510783,  // 0x1e3fffff
+    },
+    dnsSeeds: [
+    ],
+    defaultClientPort: 9253
 };
 
 exports.mainnet = exports.livenet;
